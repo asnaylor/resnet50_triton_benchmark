@@ -45,3 +45,13 @@ The NVIDIA `perf_analyzer` tool is used throughout this repository to measure th
 Make sure `perf_analyzer` is installed as part of the Triton client tools. You can use it to run benchmarks with various concurrency levels, batch sizes, and measurement intervals to evaluate the server's performance under different workloads.
 
 For more details, refer to the [Triton Inference Server perf_analyzer documentation](https://github.com/triton-inference-server/server/blob/main/docs/perf_analyzer.md).
+
+## Security Best Practices
+
+- **Use Trusted Container Images**: Always use official or verified container images for Triton and related tools to avoid vulnerabilities.
+- **Limit Network Exposure**: Restrict Triton server ports to trusted networks or use firewalls to prevent unauthorized access.
+- **Enable Authentication and Authorization**: Configure Triton’s security features to require authentication for clients and control access permissions.
+- **Keep Software Updated**: Regularly update Triton, TensorRT, CUDA drivers, and container runtimes to patch security vulnerabilities.
+- **Use Secure Communication**: Enable TLS/SSL for gRPC and HTTP endpoints to encrypt data in transit.
+- **Monitor and Audit**: Continuously monitor server logs and usage to detect suspicious activity.
+- **Isolate Workloads**: Run inference workloads in isolated containers or environments to limit impact of potential breaches.
