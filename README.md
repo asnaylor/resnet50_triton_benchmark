@@ -21,7 +21,7 @@ This repo focuses on sharing instructions, scripts, and plotting notebooks to re
   - [External (via DTN)](docs/external_dtn.md)
   - [External (via Spin)](docs/external_spin.md)
 - `scripts/`: Contains various helper scripts.
-  - `README.md`: Information on how to generate the TRT `model.plan` used for inference.
+  - [`README.md`](scripts/README.md): Information on how to generate the TRT `model.plan` used for inference.
   - `export_pytorch_onnx.py`: Script to export PyTorch models to ONNX.
   - `haproxy.cfg`: Configuration file for HAProxy.
   - `lb_ips.sh`: Helper script to generate IP addresses and load balancer configuration.
@@ -36,6 +36,7 @@ This repo focuses on sharing instructions, scripts, and plotting notebooks to re
 - Access to a GPU node with NVIDIA GPUs and CUDA drivers installed.
 - Triton Inference Server installed and configured.
 - TensorRT installed.
+- The ResNet-50 TensorRT engine file (`model.plan`) already generated and available. See [`scripts/README.md`](scripts/README.md) for instructions on how to generate the TensorRT engine file.
 - NVIDIA `perf_analyzer` tool installed (part of Triton client tools).
 - Container runtime available.
 
