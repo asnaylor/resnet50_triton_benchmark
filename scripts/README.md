@@ -36,5 +36,4 @@ To create the TensorRT (TRT) file for the ResNet-50 benchmark, follow these step
 - `perf_analyzer`: Script to run performance analysis for the Within Node case.
 
 ## Notes
-- Ensure that your system has a compatible GPU and the necessary CUDA drivers installed.
 - Refer to the TensorRT documentation for more details on the trtexec tool and other conversion options.
