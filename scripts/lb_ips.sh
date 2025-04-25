@@ -27,7 +27,7 @@ generate_ips() {
 print_balancer_cfg() {  
     #print haproxy cfg lines
     for ((n=0; n<num_nodes; n++)); do
-        for i in 0 1 2 3; do
+        for i in 0; do
             echo -e "  server http_${nodes_array[$n]}_${i} ${ips_address_array[$n]}:$((8000 + $i*10)) check"
         done
     done
@@ -35,7 +35,7 @@ print_balancer_cfg() {
     echo ""
 
     for ((n=0; n<num_nodes; n++)); do
-        for i in 0 1 2 3; do
+        for i in 0; do
             echo -e "  server gRPC_${nodes_array[$n]}_${i} ${ips_address_array[$n]}:$((8001 + $i*10)) check proto h2"
         done
     done
