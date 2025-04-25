@@ -33,12 +33,10 @@ This repo focuses on sharing instructions, scripts, and plotting notebooks to re
 
 ## Prerequisites
 
-- Access to a GPU node with NVIDIA GPUs and CUDA drivers installed.
-- Triton Inference Server installed and configured.
-- TensorRT installed.
+- Access to NVIDIA GPUs with necessary drivers.
+- Triton Inference Server and TensorRT installed or container runtime avaliable.
 - The ResNet-50 TensorRT engine file (`model.plan`) already generated and available. See [`scripts/README.md`](scripts/README.md) for instructions on how to generate the TensorRT engine file.
-- NVIDIA `perf_analyzer` tool installed (part of Triton client tools).
-- Container runtime available.
+- NVIDIA `perf_analyzer` tool (part of Triton client tools).
 
 ## NVIDIA perf_analyzer
 
